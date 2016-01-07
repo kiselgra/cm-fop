@@ -1,0 +1,5 @@
+(decl 1)
+(function 4)
+(implement 2)
+(for 1)
+(parallel-fn 3)
