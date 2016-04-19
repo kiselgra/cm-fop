@@ -12,9 +12,9 @@
        (deflmacro define-target (name &optional (base-target 'default))
 	 `(defclass ,name (,base-target) ()))
 
-       (deflmacro define-feature (name args)
+       (deflmacro define-feature (name &optional args)
 	 (let* ((gen (symbol-append 'feature- name))
-		(arg-names (extract-parameter-names-from-lambda-list args)))
+		(arg-names (if args (extract-parameter-names-from-lambda-list args)  nil)))
 	   `(progn
 	      (push (list (defgeneric ,gen ,',(loop for c from 1 to cn collect (cn c)))
 			  (cons ',name (list ',args)))
