@@ -6,8 +6,8 @@
   (flet ((cn (i) (cg-user:cintern (format nil "c~a" i))))
     `(progn
        (defclass default () ())
-       (defvar *generics* nil)
-       (defvar *composition-system-combination-factor* ,cn)
+       (defparameter *generics* nil)
+       (defparameter *composition-system-combination-factor* ,cn)
 
        (deflmacro define-target (name &optional (base-target 'default))
 	 `(defclass ,name (,base-target) ()))
