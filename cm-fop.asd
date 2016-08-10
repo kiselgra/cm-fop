@@ -1,9 +1,7 @@
 (defpackage :cm-fop
   (:use :common-lisp)
-  (:import-from :cg-user
-		:deflmacro
-		:lisp
-		:extract-parameter-names-from-lambda-list
+  (:import-from :cmu-c
+                :extract-parameter-names-from-lambda-list
 		:symbol-append)
   (:export :define-feature
   	   :symbol-append
@@ -14,9 +12,8 @@
 	   :parent
 	   :define-composition-system))
 
-(defsystem cm-fop
+(asdf:defsystem cm-fop
     :name "cm-fop"
-    :version "1.1.0"
-    :serial t
+    :version "1.2.0"
     :components ((:file "src/composition-system"))
-    :depends-on ("cgen"))
+    :depends-on ("cmu-c"))
