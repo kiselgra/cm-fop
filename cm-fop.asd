@@ -1,3 +1,5 @@
+(require :c-mera)
+
 (defpackage :cm-fop
   (:use :common-lisp)
   (:import-from :cmu-c
