@@ -7,14 +7,12 @@
              :make-config
              :parent
              :define-composition-system)
-     (:import-from :cg-user
-                   :deflmacro
-                   :lisp
+     (:import-from :cmu-c
                    :extract-parameter-names-from-lambda-list
                    :symbol-append))
 (load "../src/composition-system.lisp")
 
-(in-package :cg-user)
+;(in-package :cmu-c)
 (use-package :cm-fop)
 
 ; (format t "---> ~%  ~a~%~%" (macroexpand-1 '(define-composition-system 5)))

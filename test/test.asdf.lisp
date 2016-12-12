@@ -1,6 +1,3 @@
-(push "/home/kai/code/cgen/fop-proto/" asdf:*central-registry*)
-;(push "/home/eidaex/work/cgen/fop-proto/" asdf:*central-registry*)
-
 (require :cm-fop)
 (use-package :cm-fop)
 
@@ -40,7 +37,7 @@
   (let ((kernel (symbol-append 'kernel- name))
 	(args+N (append args `((int ,N))))
 	(actual (loop for arg in args
-		   append (last (cgen::flatten arg)))))
+		   append (last (flatten arg)))))
     `(in-namespace
       (function ,kernel ,args+N -> (__global__ void)
 	(decl ((int ,i (+ (* blockIdx blockDim) threadIdx)))

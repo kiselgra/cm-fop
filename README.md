@@ -7,11 +7,17 @@ With C-Mera installed the simplest test is running our example program from sour
 	$ cd cm-fop/test
 	$ cm cu test.load.lisp
 
-The output should be two implementations of a simple per-element accumulation, one using OpenMP and one using CUDA (hence, ```cm cu```, or ```cugen```).
+The output should be two implementations of a simple per-element accumulation, one using OpenMP and one using CUDA (hence, `cm cu`, or `cugen`).
 
-Now you can make the system known to your lisp environment, e.g. by
+Now you can make the system known to your lisp environment, e.g. for ccl by
 
+	$ ln -s /path/to/cm-fop ~/quicklisp/local-projects/c-mera
 	$ ln -s /path/to/cm-fop ~/quicklisp/local-projects/cm-fop
+
+or for sbcl by
+
+	$ ln -s /path/to/cm-fop ~/common-lisp/c-mera
+	$ ln -s /path/to/cm-fop ~/common-lisp/cm-fop
 
 and then use it via asdf:
 
