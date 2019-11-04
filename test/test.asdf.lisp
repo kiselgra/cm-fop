@@ -10,9 +10,6 @@
 (define-feature parallel-fn (name args (i N) &body body))
 (define-feature pfn-cpu-loop ((i N) &body body))
 
-(defmacro pragma (&rest rest) 
-  `(comment ,(format nil "~{ ~a~}" rest) :prefix "#pragma"))
-
 (define-feature in-namespace (&body body))
 
 (implement in-namespace (cpu-target)     `(namespace 'cpu_singlethreaded ,@body))
