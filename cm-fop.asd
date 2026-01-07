@@ -18,4 +18,4 @@
     :name "cm-fop"
     :version "1.2.0"
     :components ((:file "src/composition-system"))
-    :depends-on ("cmu-c"))
+    :depends-on ("c-mera"))
