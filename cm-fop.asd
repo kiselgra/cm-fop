@@ -8,6 +8,7 @@
   (:export :define-feature
   	   :symbol-append
 	   :define-target
+	   :default
 	   :implement
 	   :make-config
 	   :with-config
