@@ -1,4 +1,8 @@
-(require :cm-fop)
+(list
+ (cl-reader)
+ (require :cm-fop)
+ (use-package :cm-fop)
+ (cl-reader))
 (use-package :cm-fop)
 
 (define-composition-system 3)
